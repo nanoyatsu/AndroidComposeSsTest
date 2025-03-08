@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.nano.ui"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 28

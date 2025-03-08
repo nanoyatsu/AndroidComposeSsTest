@@ -1,4 +1,3 @@
-// @features:TEST
 package com.example.nano.ui
 
 import com.airbnb.android.showkase.annotation.ShowkaseRoot
