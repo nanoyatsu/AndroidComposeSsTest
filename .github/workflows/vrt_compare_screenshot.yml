@@ -33,7 +33,7 @@ jobs:
       - uses: dawidd6/action-download-artifact@v8
         with:
           name: screenshots
-          path: app/build/outputs/roborazzi
+          path: nano-ui/build/outputs/roborazzi
           workflow: vrt_record_screenshot.yaml
           branch: master
 
@@ -60,5 +60,5 @@ jobs:
         if: ${{ always() }}
         with:
           name: screenshot-diff-test-results
-          path: app/build/test-results
+          path: nano-ui/build/test-results
           retention-days: 30
