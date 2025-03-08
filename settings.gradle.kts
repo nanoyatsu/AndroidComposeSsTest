@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidComposeSsTest"
 include(":app")
- 
+include(":nano-ui")
