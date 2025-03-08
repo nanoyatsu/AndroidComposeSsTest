@@ -33,9 +33,11 @@ jobs:
       - uses: dawidd6/action-download-artifact@v8
         with:
           name: screenshots
-          path: app/build/outputs/roborazzi
-          workflow: vrt_record_screenshot.yaml
+          workflow: vrt_record_screenshot.yml
+          path: nano-ui/build/outputs/roborazzi
           branch: master
+          use_unzip: false
+          if_no_artifact_found: fail
 
       # If there is a difference between the screenshots, the test will fail.
       - name: compare test
@@ -60,5 +62,5 @@ jobs:
         if: ${{ always() }}
         with:
           name: screenshot-diff-test-results
-          path: app/build/test-results
+          path: nano-ui/build/test-results
           retention-days: 30
