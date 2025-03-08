@@ -18,7 +18,7 @@ fun Test2Content() {
     ) {
         Column {
             Text("Test2Content")
-            Text("★　☆　★")
+            Text("★　☆　★ sabun")
         }
     }
 }
