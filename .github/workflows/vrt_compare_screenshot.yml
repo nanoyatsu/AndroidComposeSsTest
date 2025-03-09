@@ -43,23 +43,22 @@ jobs:
         id: compare-test
         run: ./gradlew nano-ui:compareRoborazziDebug --tests "RoborazziTest" --stacktrace
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ always() }}
-        with:
-          name: screenshots-diff
-          path: nano-ui/build/outputs/roborazzi
-          retention-days: 30
+      - name: move result files
+        run: |
+          mkdir -p result/outputs/roborazzi
+          mv nano-ui/build/outputs/roborazzi/* result/outputs/roborazzi
+          mv nano-ui/build/reports/roborazzi/* result/outputs/roborazzi
+
+      #      - uses: actions/upload-artifact@v4
+      #        if: ${{ always() }}
+      #        with:
+      #          name: screenshots-diff
+      #          path: nano-ui/build/outputs/roborazzi
+      #          retention-days: 30
 
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: screenshots-diff-reports
-          path: nano-ui/build/reports/roborazzi
-          retention-days: 30
-
-      - uses: actions/upload-artifact@v4
-        if: ${{ always() }}
-        with:
-          name: screenshot-diff-test-results
-          path: nano-ui/build/test-results/roborazzi
+          path: result
           retention-days: 30
