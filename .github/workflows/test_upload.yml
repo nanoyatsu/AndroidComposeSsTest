@@ -1,0 +1,17 @@
+name: test_upload
+
+on: workflow_dispatch
+
+jobs:
+  test_upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+
+    steps:
+      - name: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: test_html
+          path: .github/scripts/test.html
