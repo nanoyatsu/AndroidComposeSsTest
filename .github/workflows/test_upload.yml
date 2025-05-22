@@ -16,3 +16,27 @@ jobs:
           name: test_html.html
           path: .github/scripts/test.html
           include-hidden-files: true
+
+
+      - name: upload2
+        uses: actions/upload-artifact@v4
+        with:
+          name: test_html2.html
+          path: .github/test.html
+          include-hidden-files: true
+
+
+      - name: upload3
+        uses: actions/upload-artifact@v4
+        with:
+          name: test_html3.html
+          path: .test.html
+          include-hidden-files: true
+
+
+      - name: upload4
+        uses: actions/upload-artifact@v4
+        with:
+          name: test_html4.html
+          path: .github/workflows/test.html
+          include-hidden-files: true
