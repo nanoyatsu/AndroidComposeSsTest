@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test_html3.html
-          path: .test.html
+          path: test.html
           include-hidden-files: true
 
 
